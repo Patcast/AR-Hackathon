@@ -11,22 +11,44 @@
     <script>
         THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
     </script>
+    <link rel="stylesheet" href="css/main.css">
     <script src="./script.js"></script>
     <link rel="stylesheet" type="text/css" href="./style.css"/>
 </head>
 
 <body style='margin: 0; overflow: hidden;'>
-    <div class="overlay">
-        
-    </div>  
-    <div class="centered instructions"></div>
-    <a-scene 
+    <span id="scene">
+
+        <div class="centered instructions"></div>
+        <a-scene 
         vr-mode-ui='enabled: false' 
         embedded
         arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-    <a-camera gps-camera rotation-reader></a-camera>
-</a-scene>
-<div class="centered">
-    <button data-action="change"></button>
+        <a-camera gps-camera rotation-reader></a-camera>
+    </a-scene>
+    <div class="centered">
+        <button class="bttn" data-action="change"></button>
+    </div>
+</span>
+<div id="overlayContainer">
+    <div id="languageS">
+        <p id="labelL">Language</p>
+        <button class="l btn" id="en">English</button><br>
+        <button class="l btn" id="nl">Nederlands</button><br>
+        <button class="l btn" id="es">Español</button><br>
+        <button class="l btn" id="fr">Français</button><br>
+    </div>
+    <div id="overlay">
+        <div id="speechHolder">
+            <p id="speech"></p>
+        </div>
+        <span id="btnWrapper">
+            <button class="o btn" id="lSelector">Language</button>
+            <button class="o btn" id="nxt">Next</button>
+        </span>
+    </div>
 </div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/main.js"></script>
 </body>
+</html>

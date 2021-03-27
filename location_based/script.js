@@ -11,8 +11,8 @@ function staticLoadPlaces() {
         {
             name: 'Pokèmon',
             location: {
-                lat: 50.879050, 
-                lng: 4.701367,
+                lat: 50.568683, 
+                lng: 4.002001,
             },
         },
     ];
@@ -20,22 +20,22 @@ function staticLoadPlaces() {
 
 var models = [
     {
-        url: './assets/shiba/scene.gltf',
-        scale: '0.005 0.005 0.005',
-        info: 'Gerardus Mercator, Lv. 5, HP 10/10',
+        url: './assets/queen/scene.gltf',
+        scale: '1 1 1',
+        info: 'queen, Lv. 5, HP 10/10',
         rotation: '0 180 0',
-    },
-    {
-        url: './assets/head/scene.gltf',
-        scale: '0.2 0.2 0.2',
-        rotation: '0 180 0',
-        info: 'Lambertus I, Lv. 80, HP 100/100',
     },
     {
         url: './assets/medieval_man/scene.gltf',
-        scale: '0.008 0.008 0.008',
+        scale: '1 1 1',
         rotation: '0 180 0',
-        info: 'Fiere  Margriet, Lv. 99, HP 150/150',
+        info: 'medival man, Lv. 80, HP 100/100',
+    },
+    {
+        url: './assets/girl_bust/scene.gltf',
+        scale: '1 1 1',
+        rotation: '0 180 0',
+        info: 'girl bust, Lv. 99, HP 150/150',
     },
 ];
 
