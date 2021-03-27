@@ -24,20 +24,16 @@ var models = [
         url: './assets/medieval_man/scene.gltf',
         scale: '1 1 1',
         rotation: '0 180 0',
+        id:'medieveal_man',
         info: 'medival man, Lv. 80, HP 100/100',
     },
     {
         url: './assets/queen/scene.gltf',
         scale: '1 1 1',
+        id:'queen',
         info: 'queen, Lv. 5, HP 10/10',
         rotation: '0 180 0',
-    },
-    {
-        url: './assets/girl_bust/scene.gltf',
-        scale: '1 1 1',
-        rotation: '0 180 0',
-        info: 'girl bust, Lv. 99, HP 150/150',
-    },
+    }
 ];
 
 var modelIndex = 0;
