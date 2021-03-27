@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>GeoAR.js demo</title>
-    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
     <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script>
-        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+      THREEx.ArToolkitContext.baseURL =
+        "https://raw.githack.com/jeromeetienne/ar.js/master/three.js/";
     </script>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
     <script src="./script.js"></script>
-    <link rel="stylesheet" type="text/css" href="./style.css"/>
-</head>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
 
-<body style='margin: 0; overflow: hidden;'>
+  <body style="margin: 0; overflow: hidden">
     <span id="scene">
-
-        <div class="centered instructions"></div>
-        <a-scene 
-        vr-mode-ui='enabled: false' 
+      <div class="centered instructions"></div>
+      <a-scene
+        vr-mode-ui="enabled: false"
         embedded
-        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+        arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+      >
         <a-camera gps-camera rotation-reader></a-camera>
-    </a-scene>
-    <div class="centered">
+      </a-scene>
+      <div class="centered">
         <button class="bttn" data-action="change"></button>
-    </div>
-</span>
-<div id="overlayContainer">
-    <div id="languageS">
-        <p id="labelL">Language</p>
-        <button class="l btn" id="en">English</button><br>
-        <button class="l btn" id="nl">Nederlands</button><br>
-        <button class="l btn" id="es">Español</button><br>
-        <button class="l btn" id="fr">Français</button><br>
-    </div>
-    <div id="overlay">
+      </div>
+    </span>
+    <div id="overlayContainer">
+      <div id="languageS">
+        <h3 id="labelL">Language</h3>
+        <button class="l btn" id="en">English</button><br />
+        <button class="l btn" id="nl">Nederlands</button><br />
+        <button class="l btn" id="es">Español</button><br />
+        <button class="l btn" id="fr">Français</button><br />
+      </div>
+      <div id="overlay">
         <div id="speechHolder">
-            <p id="speech"></p>
+          <p id="speech"></p>
         </div>
         <span id="btnWrapper">
-            <button class="o btn" id="lSelector">Language</button>
-            <button class="o btn" id="nxt">Next</button>
+          <button class="o btn" id="lSelector">Language</button>
+          <button class="o btn" id="nxt">Next</button>
         </span>
+      </div>
     </div>
-</div>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/main.js"></script>
-</body>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
