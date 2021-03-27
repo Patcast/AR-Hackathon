@@ -4,9 +4,13 @@ const monuments=[
 	scale: ".1 .1 .1",
 	rotation: "0 180 0",
 	position: '0 0 0',
-	lat: 50.568683,
-	lon: 4.002001,
-	info:["Super info !"],
+	lat: 50.879028,
+	lon: 4.701201,
+	info: {
+		nl: ["goedemiddagreiziger, mijn naam is <strong>Gerard De Kremer</strong>. Kunt u geloven dat ik hier 500 jaar geleden woonde ?", "Ik heb trouwens gestudeerd aan de KU Leuven. Ik was gepassioneerd door het universum.", "Mijn grootste droom was om te tekenen een uitgebreid kaartenboek van de aarde en de hemelen."],
+		en: ["Hello traveler! My name is <strong>Gerard De Kremer</strong>. Can you trust that I've been living here 500 years ago ?", "As a matter of fact, I studied at KU Leuven. I was passionate about the universe.", "My biggest dream was to draw and use a map of the earth and the skies."],	
+		fr: ["Bonjour voyageur ! Je m'appelle <strong>Gerard de Kremer</strong>. Pouvez vous croire que j'ai vécu ici il y a 500 ans ?", "En plus de cela, j'ai étudié à la KU Leuven. J'étais passionné par l'unnivers.", "Mon plus grand rêve était de dessiner et d'utiliser une carte de la terre et du ciel."],
+	},
 	index: 0
 },
 {
@@ -14,11 +18,13 @@ const monuments=[
 	scale: "5 5 5",
 	rotation: "0 180 0",
 	position: '0 0 0',
-	lat: 50.567972,
-	lon:  4.002360,
-	info:["Good afternoon traveler! My name is Maria of Brabant",
-	"I lived here in Leuven about 800 years ago. ",
-	"I was the Queen of France but before that I was imprisoned. Would you like to hear how did I do that? "],
+	lat: 50.878570, 
+	lon:  4.701504,
+	info: {
+		en: ["Good afternoon traveler! My name is <strong>Maria of Brabant</strong>",
+	"I lived here in <strong>Leuven</strong> about 800 years ago. ",
+	"I was the <strong>Queen of France</strong> but before that I was imprisoned. Would you like to hear how did I do that? "],
+	},
 	index:1
 }];
 var listeners=[];
