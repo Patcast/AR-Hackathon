@@ -36,6 +36,19 @@ function hideOverlay(){
 }
 
 
+$("#nxt").click(()=>{
+	var infoIndex = $("#nxt").data("infoId");
+	var monument = monuments[$("#nxt").data("monIndex")];
+	if(infoIndex < monument.info.length){
+		$("speech").txt(monument.info[infoIndex]);
+		$("#nxt").data("infoId", infoIndex);
+		infoIndex ++;
+	}
+	else{
+		$("speechHolder").css("display", "none");
+	}
+});
+
 $("#en").click(function(){
 	lan="en";
 	hideLan();

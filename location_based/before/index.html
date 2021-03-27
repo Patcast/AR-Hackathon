@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="./js/jquery.min.js"></script>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>LiveHistory</title>
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script>
+      THREEx.ArToolkitContext.baseURL =
+      "https://raw.githack.com/jeromeetienne/ar.js/master/three.js/";
+  </script>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="./js/clickListener.js"></script>
+  <script src="./js/monuments.js"></script>
+  <script src="./js/events.js"></script>
+</head>
+
+<body style="margin: 0; overflow: hidden">
+    <span id="scene">
+      <div class="centered instructions"></div>
+      <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      arjs="sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;"
+      >
+      <a-camera gps-camera rotation-reader></a-camera>
+  </a-scene>
+</span>
+<div id="languageS">
+  <h3 id="labelL">Language</h3>
+  <button class="l btn" id="en">English</button><br />
+  <button class="l btn" id="nl">Nederlands</button><br />
+  <button class="l btn" id="es">Español</button><br />
+  <button class="l btn" id="fr">Français</button><br />
+</div>
+<div id="temp-overlay">
+</div>
+<div id="overlay">
+<span id="btnWrapper">
+    <button class="o btn" id="lSelector">Language</button>
+    <button class="o btn" id="nxt">Next</button>
+</span>
+</div>
+<div id="speechHolder">
+	<div class="close"><span id="closeBtn"><img src="images/close.png"></span></div>
+	<div id="speech"></div>
+</div>
+<script src="./js/main.js"></script>
+</body>
+</html>

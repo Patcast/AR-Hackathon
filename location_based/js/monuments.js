@@ -6,9 +6,7 @@ const monuments=[
 	position: '0 0 0',
 	lat: 50.568683,
 	lon: 4.002001,
-	info1:"first info",
-	info2:"Second super interesting info",
-	info3: "Last but not least !",
+	info:["Super info !"],
 	index: 0
 },
 {
@@ -18,16 +16,14 @@ const monuments=[
 	position: '0 0 0',
 	lat: 50.567972,
 	lon:  4.002360,
-	info1:"first info",
-	info2:"Second super interesting info",
-	info3: "Last but not least !",
+	info:["Good afternoon traveler! My name is Maria of Brabant",
+	"I lived here in Leuven about 800 years ago. ",
+	"I was the Queen of France but before that I was imprisoned. Would you like to hear how did I do that? "],
 	index:1
 }];
 var listeners=[];
 
 $(document).ready(()=>{
-	const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '﹖';
 
     renderPlaces(monuments);
 });
@@ -48,7 +44,7 @@ function randomString() {
 }
 
 
-
+// this function creates the event handler and binds it to its associated monument
 function newTapHandler(tapHandler, id, monument){
 	// tapHandler is the id of the tapHandler and id is the auto generated id
 	AFRAME.registerComponent(tapHandler, {
@@ -57,9 +53,8 @@ function newTapHandler(tapHandler, id, monument){
 			//Setting the target to the desired monument
 			const aEntity = document.querySelector("#"+id);
 
-			// aEntity.removeEventListener("click", clickListener);
 			aEntity.addEventListener('click',function(ev, target){
-				listeners[0].action(ev, aEntity);
+				listeners[monument.index].action(ev, aEntity);
 			});
 	}});
 }
@@ -72,6 +67,7 @@ function generateObject(monument){
 	let model = document.createElement('a-entity');
 	model.setAttribute("gps-entity-place", "latitude:"+monument.lat+"; longitude:"+monument.lon+";");
 
+	// Setting the required attributes
 	model.setAttribute('cursor', 'rayOrigin: mouse');
 	model.setAttribute('emitevents', 'true');
 	model.setAttribute('scale', monument.scale);
@@ -81,10 +77,11 @@ function generateObject(monument){
 	model.setAttribute('animation-mixer', '');
 	model.setAttribute(str2, '');
 	model.setAttribute("gltf-model", monument.url);
-	listeners[monument.index] = new clickListener();
+	// setting a monument-specific listenner
+	listeners[monument.index] = new clickListener(monument);
 
 	scene.appendChild(model);
-
+	
 	newTapHandler(str2, str1, monument);
 
 }

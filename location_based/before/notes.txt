@@ -1,0 +1,3 @@
+notes:
+
+GPS autour du point d'intérêt pour activer le bouton

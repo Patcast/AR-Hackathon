@@ -14,11 +14,17 @@
   left: 25vw;
   width: 50%;
 }
+#speechHolder{
+  background-color: pink;
+  width:40vw;
+  margin-left:5vw;
+}
 #scene {
   position: relative;
   z-index: 1;
 }
 #languageS {
+  display:inline-block;
   position: absolute;
   top: 0;
   left: 0;
@@ -40,6 +46,14 @@
   height: 20vh;
   display: none;
   z-index: 2;
+}
+#temp-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 #nxt {
   margin-left: 10vw;
