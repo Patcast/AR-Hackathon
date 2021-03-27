@@ -20,20 +20,20 @@ function staticLoadPlaces() {
 
 var models = [
     {
-        url: './assets/Gerardus/scene.gltf',
-        scale: '0.5 0.5 0.5',
+        url: './assets/shiba/scene.gltf',
+        scale: '0.005 0.005 0.005',
         info: 'Gerardus Mercator, Lv. 5, HP 10/10',
         rotation: '0 180 0',
     },
     {
-        url: './assets/Lambertus/scene.gltf',
+        url: './assets/head/scene.gltf',
         scale: '0.2 0.2 0.2',
         rotation: '0 180 0',
         info: 'Lambertus I, Lv. 80, HP 100/100',
     },
     {
-        url: './assets/Fiere/scene.gltf',
-        scale: '0.08 0.08 0.08',
+        url: './assets/medieval_man/scene.gltf',
+        scale: '0.008 0.008 0.008',
         rotation: '0 180 0',
         info: 'Fiere  Margriet, Lv. 99, HP 150/150',
     },
