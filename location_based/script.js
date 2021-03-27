@@ -62,12 +62,19 @@ var setModel = function (model, entity) {
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
 
+    // test using one place
+    places = [places[0]]
     places.forEach((place) => {
         let latitude = place.location.lat;
         let longitude = place.location.lng;
 
         let model = document.createElement('a-entity');
         model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+
+        model.setAttribute('taphandler', '')
+        model.setAttribute('cursor', 'rayOrigin: mouse')
+        model.setAttribute('id', 'tappable-obj')  // TODO: create custom id per object
+        model.setAttribute('emitevents', 'true')
 
         setModel(models[modelIndex], model);
 
