@@ -19,17 +19,18 @@ function staticLoadPlaces() {
 }
 
 var models = [
-    {
-        url: './assets/queen/scene.gltf',
-        scale: '1 1 1',
-        info: 'queen, Lv. 5, HP 10/10',
-        rotation: '0 180 0',
-    },
+    
     {
         url: './assets/medieval_man/scene.gltf',
         scale: '1 1 1',
         rotation: '0 180 0',
         info: 'medival man, Lv. 80, HP 100/100',
+    },
+    {
+        url: './assets/queen/scene.gltf',
+        scale: '1 1 1',
+        info: 'queen, Lv. 5, HP 10/10',
+        rotation: '0 180 0',
     },
     {
         url: './assets/girl_bust/scene.gltf',

@@ -20,8 +20,9 @@ AFRAME.registerComponent('taphandler', {
 
         // every click, we make our model grow in size :)
         aEntity.addEventListener('click', function(ev, target){
-			console.log('click on entity');
+			alert('click on entity');
 			console.log(ev);
+            alert(target);
             // const intersectedElement = ev?.detail?.intersectedEl;
 			// console.log(intersectedElement);
             // if (intersectedElement === aEntity) {
